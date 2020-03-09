@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orden_Detalle.UI.Registros"
         mc:Ignorable="d"
-        Title="rProducto" Height="450" Width="500">
+        Title="rProducto" Height="350" Width="500">
     <Grid>
         <Label Content="ProductoId" HorizontalAlignment="Left" Margin="31,36,0,0" VerticalAlignment="Top"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="35,117,0,0" VerticalAlignment="Top"/>
@@ -13,12 +13,12 @@
         <Label Content="Inventario" HorizontalAlignment="Left" Margin="260,118,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="114,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="61"/>
         <TextBox x:Name="descripcionTextBox" HorizontalAlignment="Left" Margin="110,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="inventarioTextBox" HorizontalAlignment="Left" Margin="327,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="inventarioTextBox" HorizontalAlignment="Left" Margin="327,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" IsEnabled="False"/>
         <TextBox x:Name="precioTextBox" HorizontalAlignment="Left" Margin="110,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72"/>
         <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="196,36,0,0" VerticalAlignment="Top" Height="31" Width="83" Click="buscarButton_Click"/>
-        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="38,229,0,0" VerticalAlignment="Top" Height="34" Width="85" Click="nuevoButton_Click"/>
-        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="173,227,0,0" VerticalAlignment="Top" Height="37" Width="90" Click="guardarButton_Click"/>
-        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="307,227,0,0" VerticalAlignment="Top" Height="34" Width="87" Click="eliminarButton_Click"/>
+        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="54,241,0,0" VerticalAlignment="Top" Height="34" Width="85" Click="nuevoButton_Click"/>
+        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="189,239,0,0" VerticalAlignment="Top" Height="37" Width="90" Click="guardarButton_Click"/>
+        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="323,239,0,0" VerticalAlignment="Top" Height="34" Width="87" Click="eliminarButton_Click"/>
 
     </Grid>
 </Window>

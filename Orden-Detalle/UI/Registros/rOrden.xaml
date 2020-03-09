@@ -5,25 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Orden_Detalle.UI.Registros"
         mc:Ignorable="d"
-        Title="rOrden" Height="550" Width="650">
+        Title="rOrden" Height="500" Width="600">
     <Grid>
         <Label Content="OrdenId" HorizontalAlignment="Left" Margin="24,31,0,0" VerticalAlignment="Top"/>
         <Label Content="Cliente" HorizontalAlignment="Left" Margin="16,94,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="86,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="66"/>
         <ComboBox x:Name="clienteComboBox" HorizontalAlignment="Left" Margin="19,123,0,0" VerticalAlignment="Top" Width="104"/>
-        <DataGrid x:Name="detalleDataGrid" Margin="13,162,72,184"/>
+        <DataGrid x:Name="detalleDataGrid" Margin="13,162,25,134"/>
         <Button x:Name="buscarButton" Content="Buscar" HorizontalAlignment="Left" Margin="171,30,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="buscarButton_Click"/>
-        <Button x:Name="agregarButton" Content="Agregar" HorizontalAlignment="Left" Margin="507,115,0,0" VerticalAlignment="Top" Height="36" Width="63" Click="agregarButton_Click"/>
-        <Button x:Name="removerButton" Content="Remover" HorizontalAlignment="Left" Margin="13,363,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.328,0.503" Height="31" Width="79" Click="removerButton_Click"/>
-        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="204,422,0,0" VerticalAlignment="Top" Height="38" Width="99"/>
-        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="342,420,0,0" VerticalAlignment="Top" Height="40" Width="93" Click="guardarButton_Click"/>
-        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="472,416,0,0" VerticalAlignment="Top" Height="40" Width="98" Click="eliminarButton_Click"/>
+        <Button x:Name="agregarButton" Content="Agregar" HorizontalAlignment="Left" Margin="499,115,0,0" VerticalAlignment="Top" Height="36" Width="74" Click="agregarButton_Click"/>
+        <Button x:Name="removerButton" Content="Remover" HorizontalAlignment="Left" Margin="15,355,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.328,0.503" Height="31" Width="79" Click="removerButton_Click"/>
+        <Button x:Name="nuevoButton" Content="Nuevo" HorizontalAlignment="Left" Margin="203,402,0,0" VerticalAlignment="Top" Height="38" Width="99"/>
+        <Button x:Name="guardarButton" Content="Guardar" HorizontalAlignment="Left" Margin="341,400,0,0" VerticalAlignment="Top" Height="40" Width="93" Click="guardarButton_Click"/>
+        <Button x:Name="eliminarButton" Content="Eliminar" HorizontalAlignment="Left" Margin="471,396,0,0" VerticalAlignment="Top" Height="40" Width="98" Click="eliminarButton_Click"/>
         <Label Content="Producto" HorizontalAlignment="Left" Margin="179,95,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="productoComboBox" HorizontalAlignment="Left" Margin="180,122,0,0" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Fecha" HorizontalAlignment="Left" Margin="362,34,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.059,0.512"/>
-        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="411,34,0,0" VerticalAlignment="Top" Width="97"/>
-        <Label Content="Cantidad" HorizontalAlignment="Left" Margin="350,118,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="cantidadTextBox" HorizontalAlignment="Left" Margin="413,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.63,-0.012"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Margin="356,33,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.059,0.512"/>
+        <DatePicker x:Name="fechaDatePicker" HorizontalAlignment="Left" Margin="427,35,0,0" VerticalAlignment="Top" Width="97"/>
+        <Label Content="Cantidad" HorizontalAlignment="Left" Margin="340,119,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cantidadTextBox" HorizontalAlignment="Left" Margin="400,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="81" RenderTransformOrigin="0.63,-0.012"/>
         <Button x:Name="agregarcliente" Content="+" HorizontalAlignment="Left" Margin="129,123,0,0" VerticalAlignment="Top" Height="21" Width="24" Click="agregarcliente_Click"/>
         <Button x:Name="agregarproducto" Content="+" HorizontalAlignment="Left" Margin="306,121,0,0" VerticalAlignment="Top" Height="21" Width="24" Click="agregarproducto_Click"/>
 

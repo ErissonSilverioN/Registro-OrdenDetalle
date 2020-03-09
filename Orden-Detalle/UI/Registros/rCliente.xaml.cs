@@ -22,6 +22,7 @@ namespace Orden_Detalle.UI.Registros
         public rCliente()
         {
             InitializeComponent();
+            idTextBox.Text = "0";
         }
 
         private void LimpiarCampos()

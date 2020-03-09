@@ -185,7 +185,7 @@ namespace Orden_Detalle.UI.Registros
 
             if (detalleDataGrid.SelectedItem != null)
                 this.Detalle = (List<OrdenDetalle>)detalleDataGrid.ItemsSource;
-            Productos prec = ProductoBLL.Buscar(Convert.ToInt32(idTextBox.Text));
+            
 
             this.Detalle.Add(
                 new OrdenDetalle(
@@ -193,7 +193,7 @@ namespace Orden_Detalle.UI.Registros
                     ordenId: Convert.ToInt32(idTextBox.Text),
                     articuloId: productoComboBox.SelectedIndex,
                     cantidad: Convert.ToInt32(cantidadTextBox.Text),
-                    precio: prec.Precio
+                    precio: productos.Precio
 
                     ));
 

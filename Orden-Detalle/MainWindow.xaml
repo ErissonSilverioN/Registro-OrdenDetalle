@@ -17,6 +17,10 @@
 
             </MenuItem>
 
+            <MenuItem Header="Consultas"> 
+                
+            </MenuItem>
+
 
 
         </Menu>
