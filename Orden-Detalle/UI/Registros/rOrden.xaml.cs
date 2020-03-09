@@ -228,6 +228,16 @@ namespace Orden_Detalle.UI.Registros
             productoComboBox.SelectedValuePath = "ProductoId";
         }
 
+        private void agregarcliente_Click(object sender, RoutedEventArgs e)
+        {
+            rCliente registro = new rCliente();
+            registro.ShowDialog();
+        }
 
+        private void agregarproducto_Click(object sender, RoutedEventArgs e)
+        {
+            rProducto registro = new rProducto();
+            registro.ShowDialog();
+        }
     }
 }
