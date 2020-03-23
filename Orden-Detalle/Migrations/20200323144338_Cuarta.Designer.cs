@@ -9,8 +9,8 @@ using Orden_Detalle.DAL;
 namespace Orden_Detalle.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20200309160719_Migrando")]
-    partial class Migrando
+    [Migration("20200323144338_Cuarta")]
+    partial class Cuarta
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -44,6 +44,9 @@ namespace Orden_Detalle.Migrations
                     b.Property<decimal>("Cantidad")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("ClienteId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("OrdenId")
                         .HasColumnType("INTEGER");
 
@@ -51,6 +54,8 @@ namespace Orden_Detalle.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClienteId");
 
                     b.HasIndex("OrdenId");
 
@@ -61,9 +66,6 @@ namespace Orden_Detalle.Migrations
                 {
                     b.Property<int>("OrdenId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Cantidad")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("ClienteId")
@@ -105,6 +107,10 @@ namespace Orden_Detalle.Migrations
 
             modelBuilder.Entity("Orden_Detalle.Entidades.OrdenDetalle", b =>
                 {
+                    b.HasOne("Orden_Detalle.Entidades.Clientes", null)
+                        .WithMany("Detalle")
+                        .HasForeignKey("ClienteId");
+
                     b.HasOne("Orden_Detalle.Entidades.Ordenes", null)
                         .WithMany("Detalle")
                         .HasForeignKey("OrdenId")

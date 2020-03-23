@@ -12,7 +12,7 @@ namespace Orden_Detalle.Entidades
         public int OrdenId { get; set; }
         public int ClienteId { get; set; }
         public int Producto { get; set; }
-        public int Cantidad { get; set; }
+        //public int Cantidad { get; set; }
 
 
         public decimal Monto { get; set; }
@@ -26,7 +26,7 @@ namespace Orden_Detalle.Entidades
             OrdenId = 0;
             ClienteId = 0;
             Producto = 0;
-            Cantidad = 0;
+            //Cantidad = 0;
             Monto = 0;
             Fecha = DateTime.Now;
         }

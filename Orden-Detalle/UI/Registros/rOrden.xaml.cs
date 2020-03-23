@@ -57,7 +57,7 @@ namespace Orden_Detalle.UI.Registros
             ordenes.Producto = productoComboBox.SelectedIndex;
             ordenes.OrdenId = Convert.ToInt32(idTextBox.Text);
             ordenes.Fecha = fechaDatePicker.DisplayDate;
-          //  ordenes.Cantidad = Convert.ToInt32(cantidadTextBox.Text);
+            //ordenes.Cantidad = Convert.ToInt32(cantidadTextBox.Text);
 
             ordenes.Detalle = this.Detalle;
 
@@ -70,7 +70,7 @@ namespace Orden_Detalle.UI.Registros
             clienteComboBox.SelectedIndex = ordenes.ClienteId;
             productoComboBox.SelectedIndex = ordenes.Producto;
             fechaDatePicker.SelectedDate = ordenes.Fecha;
-            cantidadTextBox.Text = Convert.ToString(ordenes.Cantidad);
+            //cantidadTextBox.Text = Convert.ToString(ordenes.Cantidad);
 
             this.Detalle = ordenes.Detalle;
             CargarDataGrid();

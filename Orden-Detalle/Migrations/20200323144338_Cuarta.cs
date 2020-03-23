@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Orden_Detalle.Migrations
 {
-    public partial class Migrando : Migration
+    public partial class Cuarta : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,7 +28,6 @@ namespace Orden_Detalle.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     ClienteId = table.Column<int>(nullable: false),
                     Producto = table.Column<int>(nullable: false),
-                    Cantidad = table.Column<int>(nullable: false),
                     Monto = table.Column<decimal>(nullable: false),
                     Fecha = table.Column<DateTime>(nullable: false)
                 },
@@ -61,11 +60,18 @@ namespace Orden_Detalle.Migrations
                     OrdenId = table.Column<int>(nullable: false),
                     ArticuloId = table.Column<int>(nullable: false),
                     Cantidad = table.Column<decimal>(nullable: false),
-                    Precio = table.Column<decimal>(nullable: false)
+                    Precio = table.Column<decimal>(nullable: false),
+                    ClienteId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_OrdenDetalle", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_OrdenDetalle_clientes_ClienteId",
+                        column: x => x.ClienteId,
+                        principalTable: "clientes",
+                        principalColumn: "ClienteId",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_OrdenDetalle_ordenes_OrdenId",
                         column: x => x.OrdenId,
@@ -73,6 +79,11 @@ namespace Orden_Detalle.Migrations
                         principalColumn: "OrdenId",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_OrdenDetalle_ClienteId",
+                table: "OrdenDetalle",
+                column: "ClienteId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_OrdenDetalle_OrdenId",
@@ -83,13 +94,13 @@ namespace Orden_Detalle.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "clientes");
-
-            migrationBuilder.DropTable(
                 name: "OrdenDetalle");
 
             migrationBuilder.DropTable(
                 name: "productos");
+
+            migrationBuilder.DropTable(
+                name: "clientes");
 
             migrationBuilder.DropTable(
                 name: "ordenes");
