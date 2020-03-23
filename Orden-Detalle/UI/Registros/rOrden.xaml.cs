@@ -239,5 +239,10 @@ namespace Orden_Detalle.UI.Registros
             rProducto registro = new rProducto();
             registro.ShowDialog();
         }
+
+        private void nuevoButton_Click(object sender, RoutedEventArgs e)
+        {
+            LimpiarCampos();
+        }
     }
 }
